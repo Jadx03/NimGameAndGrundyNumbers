@@ -1,0 +1,52 @@
+# GUI
+root = tk.Tk()
+
+
+def stGame():
+    print("")
+
+
+def remItems():
+    print("")
+
+
+canvas = tk.Canvas(root, height=500, width=500, bg="#263D42")
+canvas.pack()
+
+frame = tk.Frame(canvas, bg="grey")
+frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
+
+canvas2 = tk.Canvas(root, height=200, width=500)
+canvas2.pack()
+
+startNum = tk.Entry(canvas2, width=20, borderwidth=5)
+startNum.pack()
+startGame = tk.Button(canvas2, text="Start Game", padx=10, pady=5, fg="white", bg="#263D42", command=stGame)
+startGame.pack()
+
+remNum = tk.Entry(canvas2, width=20, borderwidth=5)
+remNum.pack()
+Remove = tk.Button(canvas2, text="Remove", padx=10, pady=5, fg="white", bg="#263D42", command=remItems)
+Remove.pack()
+
+root.mainloop()
+
+# other stuff
+
+
+# Mex function
+def mex(set):
+    Mex = 0
+
+    while (Mex in set):
+        Mex += 1
+
+    return Mex
+
+
+# Function to check if the num is in first 20 fib Nums.
+def checkFib(n):
+    if(n in fibNums):
+        return True
+    else:
+        return False
